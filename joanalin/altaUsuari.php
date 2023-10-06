@@ -16,7 +16,7 @@
             echo"connectado";
         }
         //QUERY para la consulta
-        $query = `INSERT INTO `user`(`id`, `rol`, `name`, `surname`, `password`, `email`, `active`) VALUES ($id, $rol, $name, $surname, $password, $email, $active);` 
+        $query = `INSERT INTO `user`(`id`, `rol`, `name`, `surname`, `password`, `email`, `active`) VALUES ($_POST['id'], $_POST['rol'], $_POST['name'], $_POST['surname'], $_POST['password'], $_POST['email'], $_POST['active']);` 
 
         //obtenemos valores del formulario
         $id = $_POST['id'];
