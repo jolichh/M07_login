@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="form">
+        <form action="formulario.php" method="post">
+            <div> 
+                <label for="id">ID </label><br>
+                <input type="number" name="id">
+            </div>
+            <div> 
+                <label for="rol">rol </label><br>
+                <input type="text" name="rol">
+            </div>
+            <div> 
+                <label for="name">name </label><br>
+                <input type="text" name="name">
+            </div>
+            <div> 
+                <label for="surname"> surname</label><br>
+                <input type="text" name="surname">
+            </div>
+            <div> 
+                <label for="password"> password</label><br>
+                <input type="password" name="password">
+            </div>
+            <div> 
+                <label for="email"> email</label><br>
+                <input type="email" name="email">
+            </div>
+            <div> 
+                <label for="active"> active (0 false, 1 true)</label><br>
+                <input type="number" name="active">
+            </div>
+            <input type="submit" value="submit">
+        </form>
+    </div>    
+</body>
+</html>
