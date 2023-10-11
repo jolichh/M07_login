@@ -17,3 +17,10 @@ Dades alumnat/professorat que han d’estar al formulari:
 *(La part de frontend no ha de ser complexa. Es recomana utilitzar una plantilla de [getbootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/))*
 
 **RESPOSTA EXECUCIÓ**
+
+
+### Formulario
+![Formulario de Oriana Rojas](./img/formulario-ori.png)
+
+### Tabla user
+![Tabla user de Oriana Rojas](./img/user-ori.png)

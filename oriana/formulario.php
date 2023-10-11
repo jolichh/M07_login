@@ -3,12 +3,12 @@
     $db_host = "localhost";
     $db_nom = "users";
     $db_usuari = "root";
+    $db_passwd = "";
 
-    $connexio = mysqli_connect($db_host, $db_usuari, $db_nom); // connectar
+    $connexio = mysqli_connect($db_host, $db_usuari, $db_passwd, $db_nom); // connectar
     
     // validar amb isset?
-    if(isset($_POST['id']) and isset($_POST['rol']) and isset($_POST['name']) and isset($_POST['surname']) and 
-    isset($_POST['password']) and isset($_POST['email']) and isset($_POST['active'])) {
+    if(isset($_POST['submit'])) {
         // Obtenem les dades del formulari POST
         $id = $_POST['id'];
         $rol = $_POST['rol'];
@@ -17,13 +17,25 @@
         $password = $_POST['password'];
         $email = $_POST['email'];
         $active = $_POST['active'];
-                
-        $query = `INSERT INTO user(id, 'rol', 'name', 'surname', 'password', 'email', active)
-                  VALUES ($id, '$rol', '$name', '$surname', '$password', '$email', $active)`;
 
-        $usuaris = mysqli_query($connexio, $query); // enviar les dades a la BBDD
+        if ($active == 'true') {
+            $active = true;
+        } else {
+            $active = false;
+        }
+    
+        $query = "INSERT INTO `user`(`id`, `rol`, `name`, `surname`, `password`, `email`, `active`)
+                  VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
 
-        $echo ' guardado en la BBDD con éxito!!';
+        // enviar les dades a la BBDD
+        if (mysqli_query($connexio, $query)) {
+            echo 'Guardado en la BBDD con éxito!!';
+        } else {
+            echo 'Error al guardar en la BBDD: ' . mysqli_error($connexio);
+        }
+
+        header("Location: formulario.html");
+        // tancar la connexio
+        mysqli_close($connexio);
     }
 ?>
-<?php ?>

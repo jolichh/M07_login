@@ -10,34 +10,35 @@
     <div class="form">
         <form action="formulario.php" method="post">
             <div> 
-                <label for="id">ID </label><br>
+            <div class="mb-3"> 
+                <label class="form-label" >ID </label><br>
                 <input type="number" name="id">
             </div>
-            <div> 
+            <div class="mb-3"> 
                 <label for="rol">rol </label><br>
                 <input type="text" name="rol">
             </div>
-            <div> 
+            <div class="mb-3"> 
                 <label for="name">name </label><br>
                 <input type="text" name="name">
             </div>
-            <div> 
+            <div class="mb-3"> 
                 <label for="surname"> surname</label><br>
                 <input type="text" name="surname">
             </div>
-            <div> 
+            <div class="mb-3"> 
                 <label for="password"> password</label><br>
                 <input type="password" name="password">
             </div>
-            <div> 
+            <div class="mb-3"> 
                 <label for="email"> email</label><br>
                 <input type="email" name="email">
             </div>
-            <div> 
-                <label for="active"> active (0 false, 1 true)</label><br>
-                <input type="number" name="active">
-            </div>
-            <input type="submit" value="submit">
+            <div class="mb-3"> 
+                <label for="active"> active </label><br>
+                <input type="text" name="active" placeholder="true or false">
+            </div><br>
+            <button type="submit" class="btn btn-primary" name="submit">submit</button>
         </form>
     </div>    
 </body>
