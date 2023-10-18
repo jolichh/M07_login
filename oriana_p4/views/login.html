@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sessión</title>
+</head>
+<body>
+    <h1>Iniciar sessión de l'usuari</h1>
+    <form action="../userLogin.php" method="post">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>    
+            <label for="password">Contrassenya</label>
+            <input type="text" name="password">
+        </div>
+        <div>
+            <input type="checkbox">
+            <label> Remember me </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" name="submit"> Enviar </button>
+        </div>
+        <div>
+            <a href="index.html">Crear usuari</a>
+        </div>
+    </form>
+</body>
+</html>
