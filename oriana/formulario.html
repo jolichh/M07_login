@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="form">
+        <form action="formulario.php" method="post">
+            <div> 
+            <div class="mb-3"> 
+                <label class="form-label" >ID </label><br>
+                <input type="number" name="id">
+            </div>
+            <div class="mb-3"> 
+                <label for="rol">rol </label><br>
+                <input type="text" name="rol">
+            </div>
+            <div class="mb-3"> 
+                <label for="name">name </label><br>
+                <input type="text" name="name">
+            </div>
+            <div class="mb-3"> 
+                <label for="surname"> surname</label><br>
+                <input type="text" name="surname">
+            </div>
+            <div class="mb-3"> 
+                <label for="password"> password</label><br>
+                <input type="password" name="password">
+            </div>
+            <div class="mb-3"> 
+                <label for="email"> email</label><br>
+                <input type="email" name="email">
+            </div>
+            <div class="mb-3"> 
+                <label for="active"> active </label><br>
+                <input type="text" name="active" placeholder="true or false">
+            </div><br>
+            <button type="submit" class="btn btn-primary" name="submit">submit</button>
+        </form>
+    </div>    
+</body>
+</html>
