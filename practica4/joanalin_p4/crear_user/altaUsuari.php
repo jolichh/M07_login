@@ -1,19 +1,6 @@
 <?php
 
-    //guardem dades necessaries per fer conexió amb la base de dades
-    $db_host = "localhost";
-    $db_nombre = "users";
-    $db_usuario = "root";
-    $db_passwd = "";
-
-    //fem la connexió
-        //creem la connexió
-        $connexio = mysqli_connect($db_host, $db_usuario, $db_passwd, $db_nombre);
-
-        if (!$connexio) {
-            die("connexion fallida");
-        }
-        
+    include('../db_connection.php');
 
         //obtenemos valores del formulario
     
@@ -36,17 +23,14 @@
             $query = "INSERT INTO `user` (`id`, `rol`, `name`, `surname`, `password`, `email`, `active`) VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
 
         
-            
-        
             $result = mysqli_query($connexio, $query);
 
             if (!$result) {
                 die("Query fail!");
-            } else {
-                echo'Se ha añadido';
-            }
-
-            header("altaUsuari.html");
+            } 
+            include"../view/altaUsuari.html";
+            //header('Location: ../view/altaUsuari.html'); no me funciona
+            echo'<br>La inserció és correcte. <a href="../view/login.html">Iniciar sessió</a>';
         }
             
     mysqli_close($connexio);
