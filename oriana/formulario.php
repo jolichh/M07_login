@@ -16,13 +16,7 @@
         $surname = $_POST['surname'];
         $password = $_POST['password'];
         $email = $_POST['email'];
-        $active = $_POST['active'];
-
-        if ($active == 'true') {
-            $active = true;
-        } else {
-            $active = false;
-        }
+        $active = isset($_POST['active']) ? true : false;
     
         $query = "INSERT INTO `user`(`id`, `rol`, `name`, `surname`, `password`, `email`, `active`)
                   VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
