@@ -27,11 +27,10 @@
 
             if (!$result) {
                 die("Query fail!");
-            } else {
-                echo'Se ha añadido';
-            }
-
-            header('Location: ../view/altaUsuari.html');
+            } 
+            include"../view/altaUsuari.html";
+            //header('Location: ../view/altaUsuari.html'); no me funciona
+            echo'<br>La inserció és correcte. <a href="../view/login.html">Iniciar sessió</a>';
         }
             
     mysqli_close($connexio);
