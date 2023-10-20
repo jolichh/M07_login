@@ -24,3 +24,10 @@ Dades alumnat/professorat que han d’estar al formulari:
 Excecució
 ![Excecucio joana](img/excecucio_login1.png)
 (Més imatges a /img)
+
+### Formulario
+![Formulario de Oriana Rojas](./img/formulario-ori.png)
+
+### Tabla user
+![Tabla user de Oriana Rojas](./img/user-ori.png)
+
