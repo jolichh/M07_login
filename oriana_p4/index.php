@@ -10,25 +10,19 @@
         $password = $_POST['password'];
         $email = $_POST['email'];
         $rol = $_POST['rol'];
-        $active = $_POST['active'];
-
-        if ($active == 'true') {
-            $active = true;
-        } else {
-            $active = false;
-        }
-    
+        $active = isset($_POST['active']) ? true : false;
+        
         $query = "INSERT INTO `user`(`id`, `rol`, `name`, `surname`, `password`, `email`, `active`)
                   VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
 
         // enviar les dades a la BBDD
-        if (mysqli_query($connexio, $query)) {
-            echo 'Guardado en la BBDD con éxito!!';
-        } else {
-            echo 'Error al guardar en la BBDD: ' . mysqli_error($connexio);
+        $result =  mysqli_query($connexio, $query);
+        
+        if ($result) {
+            include 'views/index.html';
+            echo "La inserción es correcta. ";
+            exit();
         }
-
-        header("Location: ./views/index.html");
         // tancar la connexio
         mysqli_close($connexio);
     }

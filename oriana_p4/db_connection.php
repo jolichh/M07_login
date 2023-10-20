@@ -1,14 +1,9 @@
 <?php 
-    // Dades per establir la connexió amb la BBDD
-    $db_host = "localhost";
-    $db_nom = "users";
-    $db_usuari = "root";
-    $db_passwd = "";
+    include('db_Conf.php');
 
     try {
-        $connexio = mysqli_connect($db_host, $db_usuari, $db_passwd, $db_nom); // connectar
-        echo 'Guardado en la BBDD con éxito!!';
+        $connexio = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME); // connectar
     } catch(Exception $e) {
-        echo "Error al intentar conectarse a la base de datos";
+        echo "Error de conexión: " . $e->getMessage();
     }
 ?>

@@ -16,7 +16,10 @@
             </div>
             <div class="mb-3"> 
                 <label for="rol">rol </label><br>
-                <input type="text" name="rol">
+                <select id="rol" name="rol">
+                    <option value="professor">Professor</option>
+                    <option value="alumne">Alumne</option>
+                </select>
             </div>
             <div class="mb-3"> 
                 <label for="name">name </label><br>
@@ -36,7 +39,7 @@
             </div>
             <div class="mb-3"> 
                 <label for="active"> active </label><br>
-                <input type="text" name="active" placeholder="true or false">
+                <input type="checkbox" name="active">
             </div><br>
             <button type="submit" class="btn btn-primary" name="submit">submit</button>
         </form>
