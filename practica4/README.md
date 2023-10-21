@@ -1,5 +1,20 @@
 # PRÀCTICA 4 - LOGIN AMB PHP I MYSQL
 
+## ACTIVITAT
+
+Després de desenvolupar la pàgina SignIn (per crear usuaris) haurem de desenvolupar la pàgina del login. 
+Haurem de fer:
+
+**Un fitxer html  pel login.** 
+  * Serà un formulari amb el mail i el password. 
+  * Ha de tenir un checkbox “Remember me”
+  * El formulari haurà de fer servir el mètode POST.
+  * La pàgina tindrà un enllaç per poder crear un usuari (pàgina de la pràctica anterior)
+  * Totes les pàgines de la pràctica anterior hauran de tenir un enllaç per anar a login.html
+
+**Un fitxer php per validar l’usuari i contrasenya a les bases de dades.**
+Consultarà la informació introduïda a la pàgina de login per comprovar si l’usuari i el password coincideixen amb un registre de les BBDD:
+
 - El tractament serà:
   - Si la consulta retorna un resultat:
     - Si el rol és estudiant; mostrarà per pantalla: el nom, cognom, email
