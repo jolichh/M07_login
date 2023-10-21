@@ -26,4 +26,5 @@
         // tancar la connexio
         mysqli_close($connexio);
     }
+    header("Location: views/index.html");
 ?>
