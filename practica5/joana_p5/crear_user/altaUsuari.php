@@ -28,9 +28,9 @@
             if (!$result) {
                 die("Query fail!");
             } 
-            include"../view/altaUsuari.html";
+            // include("../view/index.php");
             //header('Location: ../view/altaUsuari.html'); no me funciona
-            echo'<br>La inserció és correcte. <a href="../view/login.html">Iniciar sessió</a>';
+            echo'<br>La inserció és correcte. <a href="../view/index.php">Iniciar session/Login</a>';
         }
             
     mysqli_close($connexio);

@@ -32,10 +32,10 @@
                     }                    
                 } while (mysqli_next_result($connexio));    
                 //mientras haya resultado hace bucle
-            }
-                
+            }            
         }
-     }
+        echo '<br><a href="delete_cookie.php">Back to home and delete cookies</a><br>';
+    }
         
     mysqli_close($connexio);
 ?>

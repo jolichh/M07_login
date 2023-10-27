@@ -11,6 +11,7 @@
             echo'nom: '.$data["name"].'<br>';
             echo'cognom: '.$data["surname"].'<br>';
             echo'email: '.$data["email"].'<br>';
+
         } else if ($data["rol"]=="professorat") {
             echo'Hola '.$data["name"].', ets professor!! <br><br>';
             echo"La llista d'usuaris de la base de dades és: <br>";
@@ -31,10 +32,10 @@
                     }                    
                 } while (mysqli_next_result($connexio));    
                 //mientras haya resultado hace bucle
-            }
-                
+            }            
         }
-     }
+        echo '<br><a href="delete_cookie.php">Torna a inici i elimina cookies</a><br>';
+    }
         
     mysqli_close($connexio);
 ?>

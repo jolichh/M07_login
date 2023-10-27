@@ -33,9 +33,9 @@
                 } while (mysqli_next_result($connexio));    
                 //mientras haya resultado hace bucle
             }
-                
         }
-     }
+        echo '<br><a href="delete_cookie.php">Volver a inicio y elimina cookies</a><br>';
+    }
         
     mysqli_close($connexio);
 ?>
