@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login user</h1>
+    <form action="usuari_en.php" method="post">
+        <input type="hidden" name="idioma" value="en">
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>    
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <input type="checkbox">
+            <label> Remember me </label>
+        </div><br>
+        <div>
+            <button type="submit" class="btn btn-primary" name="submit"> Send </button><br>
+        </div>
+        <div>
+            <a href="en_index.html">Create User</a>
+        </div>
+    </form>
+    <br>
+    <a href="eliminarCookie.php">Delete cookie</a><br>
+    <br>
+    <a href="idioma.php">Back to select language</a>
+</body>
+</html>

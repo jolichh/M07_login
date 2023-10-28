@@ -15,3 +15,10 @@ Cal crear 3 arxius en php:
 Per tant, tot el circuit de la pràctica anterior (login i formulari) caldrà fer-lo igual, però mostrant el login, formulari i les dades d’alumnat / professorat segons l’idioma escollit previament.
 
 En el video no caldrà mostrar la inserció de dades a la BBDD, sino el funcionament de les cookies en totes les views del repositori.
+
+### Pàgina de selecció d'idiomes.
+![Pagina de selección de idiomas](./oriana_p5/img/selectidiomes.png)
+
+[Video Joana](https://drive.google.com/file/d/1ARIiqhveyJc2mjyEYMUEM0Ky6wTmNeE4/view?usp=drive_link)
+
+[Video Oriana](https://drive.google.com/file/d/1AZ6JaY99_ba_WWdZEzQBdrqW38s7G5Ea/view?usp=sharing)
