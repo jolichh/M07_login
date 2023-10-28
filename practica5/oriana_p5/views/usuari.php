@@ -24,3 +24,11 @@
         }
     } 
 ?>
+<!DOCTYPE html>
+<html lang="ca">
+<body>
+    <br>
+    <a href="eliminarCookie.php">Eliminar cookie</a>
+    <a href="idioma.php">Tornar a la selecció d'idiomes</a>
+</body>
+</html>

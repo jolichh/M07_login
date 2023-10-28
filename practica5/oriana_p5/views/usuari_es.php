@@ -3,7 +3,7 @@
 
     // gestionar el rol si es maestro o si es alumno
     $rolUsuari = $datosUsuaris['rol'];
-
+    
     // mostrar la salida depende de si es profe o alumno
     if ($rolUsuari == 'alumne') {
         print_r('Rol de usuario: <strong>'. $rolUsuari. '</strong><br>');
@@ -24,3 +24,11 @@
         }
     } 
 ?>
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <br>
+    <a href="eliminarCookie.php">Eliminar cookie</a>
+    <a href="idioma.php">Volver a selección idioma</a>
+</body>
+</html>

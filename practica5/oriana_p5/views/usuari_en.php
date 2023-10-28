@@ -24,3 +24,11 @@
         }
     } 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <br>
+    <a href="eliminarCookie.php">Delete cookie</a>
+    <a href="idioma.php">Back to select language</a>
+</body>
+</html>

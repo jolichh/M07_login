@@ -17,10 +17,10 @@
             } 
         }
     ?>
+    <div style="text-align: center;">
+        <h1>Escull el idioma</h1>
+    </div>
     <table width="25%" align="center">
-        <tr>
-            <td>Escull el idioma</td>
-        </tr>
         <tr>
             <td><a href="crearCookie.php?idioma=es">
                 <h1>Español</h1>
