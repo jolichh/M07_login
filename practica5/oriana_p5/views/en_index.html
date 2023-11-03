@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+</head>
+<body>
+    <a href="../../../oriana/formulario.html"> Practice 3 Link</a>
+    <h1>Create user</h1>
+    <div class="form">
+        <form action="../index.php" method="post">
+            <div class="mb-3"> 
+                <label class="form-label" >Number </label>
+                <input type="number" name="id">
+            </div>
+            <div class="mb-3"> 
+                <label for="name">Name </label>
+                <input type="text" name="name">
+            </div>
+            <div class="mb-3"> 
+                <label for="surname">Surname </label>
+                <input type="text" name="surname">
+            </div>
+            <div class="mb-3"> 
+                <label for="password">Password </label>
+                <input type="password" name="password">
+            </div>
+            <div class="mb-3"> 
+                <label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="mb-3"> 
+                <label for="rol">Role </label>
+                <select id="rol" name="rol">
+                    <option value="professor">Teacher</option>
+                    <option value="alumne">Student</option>
+                </select>
+            </div>
+            <div class="mb-3"> 
+                <label for="active"> Active </label>
+                <input type="checkbox" name="active">
+            </div><br>
+            <button type="submit" class="btn btn-primary" name="submit">Send</button>
+        </form><br>
+        <div>
+            <a href="en_login.html">Login User</a><br>
+            <br>
+            <a href="eliminarCookie.php">Delete cookie</a><br>
+            <br>
+            <a href="idioma.php">Back to select language</a>
+        </div>
+    </div>    
+</body>
+</html>
