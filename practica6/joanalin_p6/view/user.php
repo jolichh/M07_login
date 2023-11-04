@@ -13,12 +13,11 @@
             echo'cognom: '.$_SESSION["surname"].'<br>';
             echo'email: '.$_SESSION["email"].'<br>';
 
-        } else if ($data["rol"]=="professorat") {
-            $valor = "professor/a ".$_SESSION['name']; 
-            
+        } else if ($data["rol"]=="professorat") {            
             echo'<h1>Benvolgut/da professor/a '.$_SESSION["name"].'</h1><br>';
             echo"La llista d'usuaris de la base de dades és: <br><br>";
 
+            //query para la obtención de los datos de la DDBB
             $query_multiple = "SELECT * FROM `user`";
 
             if (mysqli_multi_query($connexio, $query_multiple)) {
