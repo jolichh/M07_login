@@ -8,5 +8,5 @@
     // destrueix tota la session
     session_destroy();
 
-    header('Location: login.html');
+    header('Location: views/login.html'); // redirigir a login.html
 ?>

@@ -14,7 +14,7 @@
     $resultat =  mysqli_query($connexio, $credencials);
 
     if (mysqli_num_rows($resultat) == 0) {
-        include 'login.html';
+        include 'views/login.html';
         echo "<p>Login incorrecte</p>";
         exit();
     }
@@ -26,6 +26,15 @@
     $_SESSION['surname'] = $datos['surname'];
     $_SESSION['email'] = $datos['email'];
 
-    //echo $_SESSION['name'];
+    // demanar nom i cognom
+    $llista = "SELECT name, surname FROM `user`";
+    $resposta =  mysqli_query($connexio, $llista);
+    
+    // emmagatzemar els noms i cognoms de tots els usuaris en un array '$usuarios'
+    $usuarios = array();
+    while($noms = mysqli_fetch_assoc($resposta)) {
+         $usuarios[] = $noms;
+    }
+
     include 'views/usuari.php';
 ?>

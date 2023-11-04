@@ -14,3 +14,5 @@ L’activitat tindrà 3 views (Login, registre usuari i mostra de dades). Les qu
 També tindrà arxiu d’autenticació (php) i per eliminar la session. Per tant, cada vista (menys el login) ha de tindre un enllaç per eliminar la Session. Un cop eliminada la session, caldrà anar a Login.
 
 La pàgina registra usuaris només la tindreu per si voleu afegir usuaris per a fer proves.
+
+[Video Oriana](https://drive.google.com/file/d/1VWHBqs91BmTNA04I1TolrRlfDM6mACJV/view?usp=sharing) 

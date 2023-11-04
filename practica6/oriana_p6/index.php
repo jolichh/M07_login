@@ -1,7 +1,7 @@
 <?php 
     include('db_connection.php');
 
-    // validar amb isset?
+    // validar amb isset
     if(isset($_POST['submit'])) {
         // Obtenem les dades del formulari POST
         $id = $_POST['id'];
