@@ -15,4 +15,6 @@ També tindrà arxiu d’autenticació (php) i per eliminar la session. Per tant
 
 La pàgina registra usuaris només la tindreu per si voleu afegir usuaris per a fer proves.
 
+[Video Joana](https://drive.google.com/file/d/1eiqr9MmMnssk_vP1X4Fnow1B7hAR6uyE/view?usp=drive_link)
+
 [Video Oriana](https://drive.google.com/file/d/1VWHBqs91BmTNA04I1TolrRlfDM6mACJV/view?usp=sharing) 
