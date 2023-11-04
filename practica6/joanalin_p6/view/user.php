@@ -3,56 +3,42 @@
     include('../session/authentication.php');
     //obtiene el resultado del login.php y muestra los resultados según el rol
     if ($data) {    //doble comprobación
-        
-        if ($_SESSION["rol"]=="alumnat") {
-            $valor = "alumne ".$_SESSION['name'];
+        //asignacion de valores
+        echo'Sessió iniciat<br>';
+        if ($data["rol"]=="alumnat") {
+            echo'<h1>Benvolgut/da alumne '.$_SESSION["name"].'</h1><br>';
+
+            echo"Les teves dades són: <br><br>";
+            echo'nom: '.$_SESSION["name"].'<br>';
+            echo'cognom: '.$_SESSION["surname"].'<br>';
+            echo'email: '.$_SESSION["email"].'<br>';
+
         } else if ($data["rol"]=="professorat") {
-            $valor = "professor/a ".$_SESSION['name'];              
+            $valor = "professor/a ".$_SESSION['name']; 
+            
+            echo'<h1>Benvolgut/da professor/a '.$_SESSION["name"].'</h1><br>';
+            echo"La llista d'usuaris de la base de dades és: <br><br>";
+
+            $query_multiple = "SELECT * FROM `user`";
+
+            if (mysqli_multi_query($connexio, $query_multiple)) {
+
+                do {
+                    //primero guardamos resultado query
+                    if ($resultado = mysqli_store_result($connexio)) {
+                        //mostramos por cada fila de resultado
+                        while ($row = mysqli_fetch_array($resultado)) 
+                        {
+                    echo'<li>Nom i cognom: '.$row["name"].' '.$row["surname"].'</li>';
+                        }
+                        mysqli_free_result($resultado);
+                    }                    
+                } while (mysqli_next_result($connexio));    
+                //mientras haya resultado hace bucle
+            }            
         }
+        echo'<br><a href="../session/delete_session.php">Tanca la sessió</a>';
      }
         
     mysqli_close($connexio);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-</head>
-<body>
-    <p>Sessio iniciada</p>
-    <h1>Benvolgut/da <?php echo $valor?></h1>
-    <?php
-if ($data["rol"]=="alumnat") {
-    echo'soc un alumne <br>';
-    echo'nom: '.$data["name"].'<br>';
-    echo'cognom: '.$data["surname"].'<br>';
-    echo'email: '.$data["email"].'<br>';
-
-} else if ($data["rol"]=="professorat") {
-    echo'Hola '.$data["name"].', ets professor!! <br><br>';
-    echo"La llista d'usuaris de la base de dades és: <br>";
-
-    $query_multiple = "SELECT * FROM `user`";
-
-    if (mysqli_multi_query($connexio, $query_multiple)) {
-
-        do {
-            //primero guardamos resultado query
-            if ($resultado = mysqli_store_result($connexio)) {
-                //mostramos por cada fila de resultado
-                while ($row = mysqli_fetch_array($resultado)) 
-                {
-            echo'Nom i cognom: '.$row["name"].' '.$row["surname"].'<br>';
-                }
-                mysqli_free_result($resultado);
-            }                    
-        } while (mysqli_next_result($connexio));    
-        //mientras haya resultado hace bucle
-    }            
-}
-    ?>
-    <a href="../session/delete_session.php">Tanca la sessio</a>
-</body>
-</html>
